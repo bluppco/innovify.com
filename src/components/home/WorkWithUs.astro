@@ -1,11 +1,30 @@
 ---
-import Container from "../../layouts/Container.astro";
+import Container from "../../layouts/Container.astro"
+const { reasons } = Astro.props
 ---
 <section class="bg-body">
     <Container>
         <section class="py-20">
-            <div class="flex justify-start">
+            <div class="flex flex-col items-start gap-16">
                 <h1 class="font-oswald text-6xl relative px-2 after:-z-10 after:-bottom-2 after:left-0 w-fit after:absolute after:w-full after:h-6 after:bg-black after:bg-gradient-to-r from-[#c8d6e0] to-[#fadbcf]">Why work with us</h2>
+                <p class="font-roboto_condensed text-2xl text-innovify_grey">Our recipe for project success is a well-balanced mix of our expertise, agile mindset, startup speed and collaboration with our clients to accelerate the time to market and mitigate risks. </p>
+            </div>
+            <div class="grid grid-cols-3 gap-8 mt-16">
+                {
+
+                    reasons.map( ( value ) => {
+
+                        return (
+                            <div class="flex items-start justify-start flex-col gap-4">
+                                <div class="w-48 aspect-square bg-zinc-200" />
+                                <h1 class="font-roboto_condensed text-4xl text-innovify_blue tracking-wide leading-tight font-bold">Expertise</h1>
+                                <p class="font-roboto_condensed text-xl text-innovify_grey">Over 10 years of building 100+ digital products across FinTech, PropTech, eCommerce, Media and Entertainment.</p>
+                            </div>
+                        )
+
+                    })
+
+                }
             </div>
         </section>
     </Container>
