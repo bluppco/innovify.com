@@ -1,0 +1,31 @@
+---
+const { clients } = Astro.props
+import Container from "../../layouts/Container.astro"
+---
+<section class="border-b border-t border-zinc-200">
+    <Container>
+        <div class="py-20">
+            <div class="grid grid-cols-4 gap-8">
+                {
+
+                    clients.map( ( value ) => {
+
+                        return (
+                            <div class="w-full aspect-square bg-zinc-200"/>
+                        )
+
+                    })
+
+                }
+            </div>
+            <section class="flex justify-center pt-10">
+                <a class="flex gap-4 items-center" href="/work">
+                    <p class="text-innovify_orange font-roboto_condensed font-bold text-xl underline">See all our clients</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-innovify_orange">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+                </a>
+            </section>
+        </div>
+    </Container>
+</section>

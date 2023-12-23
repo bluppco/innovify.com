@@ -8,19 +8,43 @@ import { endpointFetch } from "../functions/endpoint"
 // const network_data = await fetch( endpoint + "/home" )
 // const data_json = await network_data.json()
 
-// IMPORT ASTRO COMPONENTS
+// IMPORT ASTRO LAYOUTS
 import Layout from "../layouts/Layout.astro"
-import HeaderBanner from "../components/common/HeaderBanner.astro"
 import Container from "../layouts/Container.astro";
+
+// IMPORT ASTRO COMPONENTS
+import Approach from "../components/home/Approach.astro"
+import Clients from "../components/home/Clients.astro"
+import Collaborate from "../components/home/Collaborate.astro"
+import HeaderBanner from "../components/common/HeaderBanner.astro"
+import RecentWork from "../components/home/RecentWork.astro"
+import Services from "../components/home/Services.astro"
+import WorkWithUs from "../components/home/WorkWithUs.astro"
+import Testimonials from "../components/home/Testimonials.astro"
+import Insights from "../components/home/Insights.astro"
+import FAQ from "../components/home/FAQ.astro"
 ---
-<Layout>
-	<HeaderBanner />
-	<Container>
-		<section class="grid grid-cols-2">
-			<section class="">
-				<h1 class="font-roboto_condensed text-6xl">We design & build digital products for startups & corporates to be</h1>
-				<h1 class="font-oswald text-6xl">Innovative</h1>
+<Layout title="Product Development Studio | Enterprise Software Development Company">
+	<section class="h-screen w-full">
+		<HeaderBanner />
+		<Container>
+			<section class="flex items-center h-full justify-center">
+				<section class="grid grid-cols-2">
+					<section class="">
+						<h1 class="font-roboto_condensed text-5xl text-innovify_blue tracking-wide leading-tight">We design & build digital products for startups & corporates to be</h1>
+						<h1 class="font-oswald text-6xl">Innovative</h1>
+					</section>
+				</section>
 			</section>
-		</section>
-	</Container>
+		</Container>
+	</section>
+	<Clients clients={ Array(8).fill("") } />
+	<Collaborate />
+	<RecentWork recent_work={ Array(4).fill("") } />
+	<Approach approach={ Array(3).fill("") } />
+	<Services services={ Array(3).fill("") } />
+	<WorkWithUs reasons={ Array(3).fill("") }/>
+	<Testimonials />
+	<Insights />
+	<FAQ />
 </Layout>
