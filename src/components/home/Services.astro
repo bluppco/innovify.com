@@ -1,5 +1,6 @@
 ---
 import Container from "../../layouts/Container.astro";
+const { services } = Astro.props
 ---
 <section class="bg-white">
     <Container>
@@ -7,6 +8,23 @@ import Container from "../../layouts/Container.astro";
             <div class="flex justify-center">
                 <h1 class="font-oswald text-6xl relative px-2 after:-z-10 after:-bottom-2 after:left-0 w-fit after:absolute after:w-full after:h-6 after:bg-black after:bg-gradient-to-r from-[#c8d6e0] to-[#fadbcf]">Services</h2>
             </div>
+            <div class="grid grid-cols-3 gap-8 mt-10">
+                {
+
+                    services.map( ( value ) => {
+
+                        return (
+                            <div class="flex items-center justify-center flex-col gap-4">
+                                <div class="w-48 aspect-square bg-zinc-200" />
+                                <h1 class="font-roboto_condensed text-4xl text-innovify_blue tracking-wide leading-tight font-bold">For Start Ups</h1>
+                                <p class="font-roboto_condensed text-xl text-innovify_grey text-center">Build your MVP in the most cost-efficient manner enabling you to attract early users and raise funding.</p>
+                            </div>
+                        )
+
+                    })
+
+                }
+                </div>
         </section>
     </Container>
 </section>
