@@ -2,7 +2,15 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				'oswald': ["Oswald","sans-serif"],
+				'roboto_condensed': ["Roboto Condensed","sans-serif"]
+			},
+			colors: {
+				"body": "#f05a28"
+			}
+		},
 	},
 	plugins: [],
 }
