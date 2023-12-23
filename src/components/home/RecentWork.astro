@@ -1,0 +1,36 @@
+---
+import Container from "../../layouts/Container.astro";
+const { recent_work } = Astro.props
+---
+<section class="bg-white">
+    <Container>
+        <section class="py-20">
+            <div class="flex justify-center">
+                <h1 class="font-oswald text-6xl relative px-2 after:-z-10 after:-bottom-2 after:left-0 w-fit after:absolute after:w-full after:h-6 after:bg-black after:bg-gradient-to-r from-[#c8d6e0] to-[#fadbcf]">Recent Work</h2>
+            </div>
+            <div class="pt-10 grid grid-cols-2 gap-8">
+            {
+
+                recent_work.map( ( value ) => {
+
+                    return (
+                        <div class="cursor-pointer">
+                            <div class="w-full aspect-video bg-zinc-200 overflow-hidden">
+                                <img
+                                    src="/payzilch-banner.jpeg"
+                                    class="w-full h-full object-cover hover:scale-110 duration-300"
+                                />
+                            </div>
+                            <div class="py-4">
+                                <p class="font-roboto_condensed text-innovify_grey text-3xl font-bold">A card built with millennials in mind</p>
+                            </div>
+                        </div>
+                    )
+
+                })
+
+            }
+            </div>
+        </section>
+    </Container>
+</section>

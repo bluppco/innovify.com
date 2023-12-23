@@ -16,6 +16,7 @@ import Container from "../layouts/Container.astro";
 import HeaderBanner from "../components/common/HeaderBanner.astro"
 import Clients from "../components/home/Clients.astro"
 import Collaborate from "../components/home/Collaborate.astro"
+import RecentWork from "../components/home/RecentWork.astro"
 ---
 <Layout>
 	<section class="h-screen w-full">
@@ -33,4 +34,5 @@ import Collaborate from "../components/home/Collaborate.astro"
 	</section>
 	<Clients clients={ Array(8).fill("") }/>
 	<Collaborate />
+	<RecentWork recent_work={ Array(4).fill("") }/>
 </Layout>
