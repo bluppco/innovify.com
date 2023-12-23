@@ -8,7 +8,8 @@ export default {
 				'roboto_condensed': ["Roboto Condensed","sans-serif"]
 			},
 			colors: {
-				"body": "#f05a28"
+				"body": "#f05a28",
+				"innovify_blue": "#054371",
 			}
 		},
 	},
