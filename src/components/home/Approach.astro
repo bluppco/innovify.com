@@ -1,11 +1,30 @@
 ---
 import Container from "../../layouts/Container.astro";
+const { approach } = Astro.props
 ---
 <section class="bg-body">
     <Container>
         <section class="py-20">
-            <div class="flex justify-center">
+            <div class="flex items-center flex-col gap-8">
                 <h1 class="font-oswald text-6xl relative px-2 after:-z-10 after:-bottom-2 after:left-0 w-fit after:absolute after:w-full after:h-6 after:bg-black after:bg-gradient-to-r from-[#c8d6e0] to-[#fadbcf]">Approach</h2>
+                <p class="font-roboto_condensed text-2xl text-innovify_grey text-center">Our recipe for project success is a well-balanced mix of our expertise, agile mindset, startup speed and collaboration with our clients to accelerate the time to market and mitigate risks. </p>
+            </div>
+            <div class="grid grid-cols-3 gap-8 mt-10">
+            {
+
+                approach.map( ( value ) => {
+
+                    return (
+                        <div class="flex items-center justify-center flex-col gap-4">
+                            <div class="w-48 aspect-square bg-zinc-200" />
+                            <h1 class="font-roboto_condensed text-4xl text-innovify_blue tracking-wide leading-tight font-bold">Discovery</h1>
+                            <p class="font-roboto_condensed text-xl text-innovify_grey text-center">We execute hands-on workshop with all your stakeholders to eliminate all unknowns and develop a clear delivery roadmap that suites your budget and timeline.</p>
+                        </div>
+                    )
+
+                })
+
+            }
             </div>
         </section>
     </Container>
