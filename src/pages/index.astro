@@ -13,16 +13,18 @@ import Layout from "../layouts/Layout.astro"
 import Container from "../layouts/Container.astro";
 
 // IMPORT ASTRO COMPONENTS
+import Footer from "../components/common/Footer.astro"
+import HeaderBanner from "../components/common/HeaderBanner.astro"
+
 import Approach from "../components/home/Approach.astro"
 import Clients from "../components/home/Clients.astro"
 import Collaborate from "../components/home/Collaborate.astro"
-import HeaderBanner from "../components/common/HeaderBanner.astro"
+import FAQ from "../components/home/FAQ.astro"
+import Insights from "../components/home/Insights.astro"
 import RecentWork from "../components/home/RecentWork.astro"
 import Services from "../components/home/Services.astro"
-import WorkWithUs from "../components/home/WorkWithUs.astro"
 import Testimonials from "../components/home/Testimonials.astro"
-import Insights from "../components/home/Insights.astro"
-import FAQ from "../components/home/FAQ.astro"
+import WorkWithUs from "../components/home/WorkWithUs.astro"
 ---
 <Layout title="Product Development Studio | Enterprise Software Development Company">
 	<section class="h-screen w-full">
@@ -47,4 +49,5 @@ import FAQ from "../components/home/FAQ.astro"
 	<Testimonials />
 	<Insights />
 	<FAQ />
+	<Footer />
 </Layout>
